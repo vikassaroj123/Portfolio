@@ -27,7 +27,7 @@ function AboutSection() {
             src={personalData.profile}
             width={280}
             height={280}
-            alt="Abu Said"
+            alt="Vikas Saroj"
             className="rounded-lg transition-all duration-1000 scale-100 hover:scale-110 cursor-pointer"
           />
         </div>
