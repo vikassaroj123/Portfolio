@@ -9,7 +9,7 @@ export const experiences = [
     id: 2,
     title: "Technical Team Lead",
     company: "EDC JSSATE",
-    duration: "(Fab 2023 - Present)"
+    duration: "(Feb 2023 - Present)"
   },
   {
     id: 3,
