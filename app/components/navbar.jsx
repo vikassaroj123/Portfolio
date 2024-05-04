@@ -43,7 +43,7 @@ function Navbar() {
           ].map((item, index) => (
             <li key={index} onClick={toggleMenu}>
               <Link href={item.href}>
-                <div className="block px-4 py-2 text-xl text-white transition-colors duration-300 hover:text-pink-600 md:hover:text-pink-600">
+                <div className="block px-4 py-2 text-sm text-white transition-colors duration-300 hover:text-pink-600 md:hover:text-pink-600">
                   {item.label}
                 </div>
               </Link>
