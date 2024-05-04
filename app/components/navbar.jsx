@@ -1,44 +1,58 @@
-// @flow strict
-import Link from "next/link";
+"use client";
 
+import { useState } from "react";
+import Link from "next/link";
+import { FiMenu, FiX } from "react-icons/fi";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prevMenuOpen => !prevMenuOpen);
+  };
+
   return (
     <nav className="bg-transparent">
-      <div className="flex items-center justify-between py-5">
-        <div className="flex flex-shrink-0 items-center">
-          <Link
-            href="/"
-            className=" text-[#16f2b3] text-3xl font-bold">
-            VIKAS SAROJ
-          </Link>
-        </div>
+      <div className="flex items-center justify-between py-5 px-4">
+        {/* Logo or Home Link */}
+        <Link href="/" className="text-[#16f2b3] text-3xl font-bold">
+          VIKAS SAROJ
+        </Link>
 
-        <ul className="mt-4 flex h-screen max-h-0 w-full flex-col items-start text-sm opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100" id="navbar-default">
-          <li>
-            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#about">
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
-            </a>
-          </li>
-          <li>
-            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#experience"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div></a>
-          </li>
-          <li>
-            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#skills"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div></a>
-          </li>
-          <li>
-            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#education"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EDUCATION</div></a>
-          </li>
-          <li>
-            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#blogs"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">BLOGS</div></a>
-          </li>
-          <li>
-            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#projects"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div></a>
-          </li>
+        {/* Hamburger Menu Button */}
+        <button
+          className="md:hidden text-white"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <FiX size={24} /> : <FiMenu size={32} />}
+        </button>
+
+        <ul
+          className={`absolute top-0 right-0 w-full h-full bg-gray-900 bg-opacity-100 p-8 transition-transform duration-300 ease-in-out transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'
+            } md:flex md:items-center z-10 md:justify-end md:static md:w-auto md:h-auto md:bg-transparent md:p-0 md:transform-none`}
+        >
+          {/* Add an onClick event handler to each link to close the menu on mobile view */}
+          {[
+            { href: "#about", label: "ABOUT" },
+            { href: "#experience", label: "EXPERIENCE" },
+            { href: "#skills", label: "SKILLS" },
+            { href: "#education", label: "EDUCATION" },
+            { href: "#blogs", label: "BLOGS" },
+            { href: "#projects", label: "PROJECTS" },
+          ].map((item, index) => (
+            <li key={index} onClick={toggleMenu}>
+              <Link href={item.href}>
+                <div className="block px-4 py-2 text-sm text-white transition-colors duration-300 hover:text-pink-600 md:hover:text-pink-600">
+                  {item.label}
+                </div>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;
