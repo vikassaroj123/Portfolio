@@ -21,15 +21,15 @@ function Navbar() {
 
         {/* Hamburger Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white z-50"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {menuOpen ? <FiX size={24} /> : <FiMenu size={32} />}
+          {menuOpen ? <FiX size={30} /> : <FiMenu  size={32} />}
         </button>
 
         <ul
-          className={`absolute top-0 right-0 w-full h-full bg-gray-900 bg-opacity-100 p-8 transition-transform duration-300 ease-in-out transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'
+          className={`absolute top-0 right-0 w-full h-full bg-gray-900 bg-opacity-100 p-10 transition-transform duration-300 ease-in-out transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'
             } md:flex md:items-center z-10 md:justify-end md:static md:w-auto md:h-auto md:bg-transparent md:p-0 md:transform-none`}
         >
           {/* Add an onClick event handler to each link to close the menu on mobile view */}
@@ -43,7 +43,7 @@ function Navbar() {
           ].map((item, index) => (
             <li key={index} onClick={toggleMenu}>
               <Link href={item.href}>
-                <div className="block px-4 py-2 text-sm text-white transition-colors duration-300 hover:text-pink-600 md:hover:text-pink-600">
+                <div className="block px-4 py-2 text-xl text-white transition-colors duration-300 hover:text-pink-600 md:hover:text-pink-600">
                   {item.label}
                 </div>
               </Link>
