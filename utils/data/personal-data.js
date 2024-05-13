@@ -9,7 +9,7 @@ export const personalData = {
   address: 'C-20/1, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201301',
   github: 'https://github.com/vikassaroj123',
   linkedIn: 'https://www.linkedin.com/in/vikas-saroj-b86316229/',
-  twitter: 'https://twitter.com/MrVikasSaroj1',
+  twitter: 'https://twitter.com/vikas_ssaroj',
   leetcode: "https://leetcode.com/Mr_Quantum/",
   resume: "https://drive.google.com/file/d/1XayFBIu28Rvi4i7EOSqeEBCjNlm3sUjf/view?usp=sharing"
 }
