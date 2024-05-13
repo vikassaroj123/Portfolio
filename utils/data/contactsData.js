@@ -4,5 +4,5 @@ export const contactsData = {
     address: 'C-20/1, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201301',
     github: 'https://github.com/vikassaroj123',
     linkedIn: 'https://www.linkedin.com/in/vikas-saroj-b86316229/',
-    twitter: 'https://twitter.com/MrVikasSaroj1', 
+    twitter: 'https://twitter.com/vikas_ssaroj', 
 }
