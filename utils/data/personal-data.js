@@ -11,5 +11,5 @@ export const personalData = {
   linkedIn: 'https://www.linkedin.com/in/vikas-saroj-b86316229/',
   twitter: 'https://twitter.com/vikas_ssaroj',
   leetcode: "https://leetcode.com/Mr_Quantum/",
-  resume: "https://drive.google.com/file/d/1f40bIXU4VtYKS4vhPTJBqUELP5mbBh1b/view"
+  resume: "https://drive.google.com/file/d/1wyEyajBTAE6A60S_31AnVYUbarZo9KtR/view?usp=sharing"
 }
